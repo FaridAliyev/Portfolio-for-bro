@@ -387,14 +387,13 @@ $(document).ready(function () {
         let surname = document.querySelector("#surname").value
 		let email = document.querySelector("#email").value
 		let message = document.querySelector("#message").value
-        if(name==""||surname==""||email==""||message==""){
+        if(name == "" || surname == "" || email == "" || message == ""){
             return;
         }
 		Email.send({
-            SecureToken : "e32a3898-26c1-4721-ba3a-8f63a97c5d08",
-			// Host : "smtp.gmail.com",
-			// Username : "business.azar.00@gmail.com",
-			// Password : "Azr122127pfl",
+			Host : "smtp.gmail.com",
+			Username : "business.azar.00@gmail.com",
+			Password : "Azr122127pfl",
 			To : 'aliyevazer32@gmail.com',
 			From : email,
 			Subject : 'New message from website by: ${name} ${surname}',
@@ -403,6 +402,10 @@ $(document).ready(function () {
           message => {
             $('.success-card').fadeIn()
             setTimeout(successFadeOut,3000)
+            document.querySelector("#name").value=""
+            document.querySelector("#surname").value=""
+            document.querySelector("#email").value=""
+            document.querySelector("#message").value=""
         });
 	}
 });
