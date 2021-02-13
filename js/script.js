@@ -391,9 +391,10 @@ $(document).ready(function () {
             return;
         }
 		Email.send({
-			Host : "smtp.gmail.com",
-			Username : "business.azar.00@gmail.com",
-			Password : "Azr122127pfl",
+            SecureToken : "1abebd6c-828c-48a8-9b9e-e9372b5c79ab",
+			// Host : "smtp.gmail.com",
+			// Username : "business.azar.00@gmail.com",
+			// Password : "Azr122127pfl",
 			To : 'aliyevazer32@gmail.com',
 			From : email,
 			Subject : 'New message from website by: ${name} ${surname}',
