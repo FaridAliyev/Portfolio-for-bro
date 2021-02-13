@@ -391,7 +391,7 @@ $(document).ready(function () {
             return;
         }
 		Email.send({
-            SecureToken : "1abebd6c-828c-48a8-9b9e-e9372b5c79ab",
+            SecureToken : "e32a3898-26c1-4721-ba3a-8f63a97c5d08",
 			// Host : "smtp.gmail.com",
 			// Username : "business.azar.00@gmail.com",
 			// Password : "Azr122127pfl",
