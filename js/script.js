@@ -369,14 +369,7 @@ $(document).ready(function () {
 
     $('.send-message').on('submit', function (e) {
         e.preventDefault();
-        // localStorage.SuccessMessage = "1";
     });
-
-    // if ("SuccessMessage" in localStorage) {
-    //     $('.success-card').fadeIn();
-    //     delete localStorage.SuccessMessage;
-    //     setTimeout(successFadeOut,3000);
-    // }
 
     function successFadeOut(){
         $('.success-card').fadeOut();
@@ -391,13 +384,13 @@ $(document).ready(function () {
             return;
         }
 		Email.send({
-			Host : "smtp.gmail.com",
-			Username : "business.azar.00@gmail.com",
-			Password : "Azr122127pfl",
+			Host : "smtp.elasticemail.com",
+			Username : "faridaliyev31@gmail.com",
+			Password : "C75617E2859FD642D7301C43F92C9695EC08",
 			To : 'aliyevazer32@gmail.com',
-			From : email,
-			Subject : 'New message from website by: ${name} ${surname}',
-			Body : message
+			From : 'faridaliyev31@gmail.com',
+			Subject : "New message from website by: "+name+" "+surname,
+			Body : message+" My Email: "+email
 		}).then(
           message => {
             $('.success-card').fadeIn()
